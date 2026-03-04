@@ -8,4 +8,4 @@ final sl = GetIt.instance;
 @InjectableInit(
   preferRelativeImports: true,
 )
-void configureDI() => sl.init();
+Future<void> configureDI() async => await sl.init();

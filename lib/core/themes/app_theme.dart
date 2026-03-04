@@ -13,7 +13,7 @@ sealed class Themes {
 
     /// AppBar Theme
     appBarTheme: AppBarTheme(
-      elevation: 2,
+      elevation: 0,
       centerTitle: true,
       scrolledUnderElevation: 2,
       shadowColor: const Color.fromRGBO(24, 24, 27, 0.1),
@@ -168,7 +168,7 @@ sealed class Themes {
 
     /// AppBar Theme
     appBarTheme: AppBarTheme(
-      elevation: 2,
+      elevation: 0,
       centerTitle: true,
       scrolledUnderElevation: 2,
       shadowColor: const Color.fromRGBO(0, 0, 0, 0.3),

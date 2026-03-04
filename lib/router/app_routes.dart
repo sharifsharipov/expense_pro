@@ -16,7 +16,10 @@ final GoRouter router = GoRouter(
       path: Routes.auth,
       name: Routes.auth,
       parentNavigatorKey: rootNavigatorKey,
-      builder: (_, __) => const AuthPage(),
+      builder: (_, __) => BlocProvider(
+        create: (context) => sl<AuthBloc>(),
+        child: const AuthPage(),
+      ),
     ),
   ],
 );

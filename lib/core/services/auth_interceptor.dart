@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:go_router/go_router.dart';
 import 'package:expense_pro/core/database/local_source.dart';
 import 'package:expense_pro/core/di/injection.dart';
-import 'package:expense_pro/features/auth/data/repositories/auth_repository.dart';
+//import 'package:expense_pro/features/auth/data/repositories/auth_repositories_impl.dart';
 import 'package:expense_pro/router/routes.dart';
 
 class AuthInterceptor extends Interceptor {
@@ -64,7 +64,7 @@ class AuthInterceptor extends Interceptor {
       } else {
         _refreshCompleter = Completer();
 
-        final result = await AuthRepository(
+        /*       final result = await AuthRepository(
           dio: sl<Dio>(),
           localSource: localSource,
         ).refreshToken();
@@ -74,7 +74,7 @@ class AuthInterceptor extends Interceptor {
           final clonedRequest = await _retryRequest(err.requestOptions);
           handler.resolve(clonedRequest);
           return;
-        }
+        }*/
 
         _refreshCompleter?.complete(false);
         _refreshCompleter = null;
