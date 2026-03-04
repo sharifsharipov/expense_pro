@@ -1,0 +1,16 @@
+{
+    "helloWorld": "Salom dunyo!",
+    "welcomeMessage": "Ilovamizga xush kelibsiz!",
+    "goodbyeMessage": "Xayr, tez orada ko'rishguncha!",
+    "thankYou": "Ilovamizdan foydalanganingiz uchun rahmat!",
+    "today": "Bugun",
+    "tomorrow": "Ertaga",
+    "yesterday": "Kecha",
+    "connectionTimeOut": "Ulanish vaqti tugadi. Qaytadan urinib ko'ring.",
+    "somethingWrong": "Nimadir xato ketdi.",
+    "serverError": "Server xatosi. Keyinroq urinib ko'ring.",
+    "invalidPassword": "Noto'g'ri parol.",
+    "userNotFound": "Foydalanuvchi topilmadi.",
+    "unauthorizedMessage": "Ruxsat yo'q. Iltimos, qayta kiring.",
+    "unexpectedError": "Kutilmagan xato yuz berdi."
+}

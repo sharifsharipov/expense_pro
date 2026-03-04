@@ -1,0 +1,16 @@
+{
+    "helloWorld": "Bonjour le monde!",
+    "welcomeMessage": "Bienvenue dans notre application!",
+    "goodbyeMessage": "Au revoir et à bientôt!",
+    "thankYou": "Merci d'utiliser notre application!",
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "yesterday": "Hier",
+    "connectionTimeOut": "Délai de connexion dépassé. Veuillez réessayer.",
+    "somethingWrong": "Quelque chose s'est mal passé.",
+    "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+    "invalidPassword": "Mot de passe invalide.",
+    "userNotFound": "Utilisateur introuvable.",
+    "unauthorizedMessage": "Non autorisé. Veuillez vous reconnecter.",
+    "unexpectedError": "Une erreur inattendue s'est produite."
+}
