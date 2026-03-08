@@ -6,6 +6,7 @@ import 'package:expense_pro/features/auth/domain/repositories/auth_repositories.
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 part 'auth_usecase.freezed.dart';
+
 @lazySingleton
 class AuthUsecase extends UseCase<AuthEntity, AuthParams> {
   AuthUsecase({required this.repositories});

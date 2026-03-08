@@ -9,7 +9,6 @@ part 'login_bloc.freezed.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc() : super(_Initial()) {
-    on<LoginEvent>((event, emit) {
-    });
+    on<LoginEvent>((event, emit) {});
   }
 }

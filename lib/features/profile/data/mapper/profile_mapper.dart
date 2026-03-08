@@ -1,0 +1,3 @@
+class ProfileMapper {
+  ProfileMapper._();
+}

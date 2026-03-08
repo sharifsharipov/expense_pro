@@ -58,7 +58,6 @@ class _AuthPageState extends State<AuthPage> with AuthMixin {
                 focusNode: genderFocusNode,
                 textInputAction: TextInputAction.done,
               ),
-              
             ],
           ),
         ),

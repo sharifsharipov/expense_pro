@@ -1,0 +1,54 @@
+import 'package:expense_pro/core/extensions/build_context_extension.dart';
+import 'package:expense_pro/core/extensions/padding_extensions.dart';
+import 'package:expense_pro/l10n/assets/assets.gen.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar({
+    super.key,
+    this.title = "",
+    this.centerTitle = true,
+    this.actions,
+    this.leadingVisible = true,
+    this.bottom,
+    this.onTap,
+  });
+
+  final String title;
+  final bool centerTitle;
+  final Widget? actions;
+  final bool leadingVisible;
+  final PreferredSizeWidget? bottom;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      toolbarHeight: 60,
+      leading: leadingVisible
+          ? IconButton(
+              onPressed: () {
+                onTap?.call();
+                context.pop();
+              },
+              icon: Assets.icons.arrowBack.svg(),
+            )
+          : const SizedBox.shrink(),
+      centerTitle: centerTitle,
+      title: Text(
+        title,
+        style: context.textStyle.manrope16w500,
+        maxLines: 10,
+        overflow: TextOverflow.ellipsis,
+        textAlign: TextAlign.center,
+      ),
+      actions: actions != null ? [actions!.paddingOnly(right: 20)] : [],
+      bottom: bottom,
+    );
+  }
+
+  @override
+  Size get preferredSize =>
+      Size.fromHeight(65 + (bottom?.preferredSize.height ?? 0));
+}

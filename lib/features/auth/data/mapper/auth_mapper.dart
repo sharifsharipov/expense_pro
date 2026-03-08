@@ -21,4 +21,5 @@ sealed class AuthMapper {
     gender: params.gender,
   );
 }
+
 //AuthParams //AuthRequest

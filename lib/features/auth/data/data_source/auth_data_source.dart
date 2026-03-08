@@ -4,5 +4,5 @@ import 'package:expense_pro/features/auth/data/models/auth_request/auth_request.
 import 'package:expense_pro/features/auth/data/models/auth_response/auth_response.dart';
 
 abstract class AuthDataSource {
-  Future<Either<Failure,AuthResponse>> login({required AuthRequest request});
+  Future<Either<Failure, AuthResponse>> login({required AuthRequest request});
 }

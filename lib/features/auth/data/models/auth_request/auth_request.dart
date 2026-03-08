@@ -1,4 +1,3 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'auth_request.freezed.dart';
@@ -13,5 +12,6 @@ abstract class AuthRequest with _$AuthRequest {
     required String gender,
   }) = _AuthRequest;
 
-  factory AuthRequest.fromJson(Map<String, dynamic> json) => _$AuthRequestFromJson(json);
+  factory AuthRequest.fromJson(Map<String, dynamic> json) =>
+      _$AuthRequestFromJson(json);
 }

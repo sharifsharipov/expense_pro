@@ -1,0 +1,16 @@
+import 'package:expense_pro/features/profile/presentation/pages/theme_page/theme_mixin.dart';
+import 'package:flutter/material.dart';
+
+class ThemePage extends StatefulWidget {
+  const ThemePage({super.key});
+
+  @override
+  State<ThemePage> createState() => _ThemePageState();
+}
+
+class _ThemePageState extends State<ThemePage> with ThemeMixin {
+  @override
+  Widget build(BuildContext context) {
+    return Container(child: null);
+  }
+}

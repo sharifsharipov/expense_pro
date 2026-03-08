@@ -1,0 +1,3 @@
+class HomeMapper {
+  HomeMapper._();
+}

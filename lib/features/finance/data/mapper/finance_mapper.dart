@@ -1,0 +1,3 @@
+class FinanceMapper {
+  FinanceMapper._();
+}

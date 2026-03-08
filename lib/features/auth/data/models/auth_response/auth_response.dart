@@ -4,15 +4,17 @@ part 'auth_response.freezed.dart';
 part 'auth_response.g.dart';
 
 @freezed
- abstract class AuthResponse with _$AuthResponse {
+abstract class AuthResponse with _$AuthResponse {
   const factory AuthResponse({
     required String accessToken,
     required String refreshToken,
     required User user,
   }) = _AuthResponse;
 
-  factory AuthResponse.fromJson(Map<String, dynamic> json) => _$AuthResponseFromJson(json);
+  factory AuthResponse.fromJson(Map<String, dynamic> json) =>
+      _$AuthResponseFromJson(json);
 }
+
 @freezed
 abstract class User with _$User {
   const factory User({

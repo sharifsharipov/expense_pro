@@ -8,6 +8,7 @@ import 'package:expense_pro/features/auth/data/data_source/auth_data_source.dart
 import 'package:expense_pro/features/auth/data/models/auth_request/auth_request.dart';
 import 'package:expense_pro/features/auth/data/models/auth_response/auth_response.dart';
 import 'package:injectable/injectable.dart';
+
 @LazySingleton(as: AuthDataSource)
 class AuthDataSourceImpl implements AuthDataSource {
   final Dio _dio;
