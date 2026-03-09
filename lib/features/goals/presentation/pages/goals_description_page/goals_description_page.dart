@@ -12,6 +12,8 @@ class GoalsDescriptionPage extends StatefulWidget {
 class _GoalsDescriptionPageState extends State<GoalsDescriptionPage>
     with GoalsDescriptionMixin {
   @override
-  Widget build(BuildContext context) =>
-      Scaffold(appBar: CustomAppBar(title: 'Goals Description'));
+  Widget build(BuildContext context) => Scaffold(
+    appBar: CustomAppBar(title: 'Goals Description'),
+    body: const Center(child: Text('Goals Description')),
+  );
 }

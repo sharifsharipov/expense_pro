@@ -12,6 +12,8 @@ class FinanceDescriptionPage extends StatefulWidget {
 class _FinanceDescriptionPageState extends State<FinanceDescriptionPage>
     with FinanceDescriptionMixin {
   @override
-  Widget build(BuildContext context) =>
-      Scaffold(appBar: CustomAppBar(title: 'Finance description page'));
+  Widget build(BuildContext context) => Scaffold(
+    appBar: CustomAppBar(title: 'Finance description page'),
+    body: const Center(child: Text('Finance description page')),
+  );
 }

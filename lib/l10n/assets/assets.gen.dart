@@ -77,6 +77,16 @@ class $AssetsIconsGen {
   /// File path: assets/icons/person.svg
   SvgGenImage get person => const SvgGenImage('assets/icons/person.svg');
 
+  /// File path: assets/icons/settings.svg
+  SvgGenImage get settings => const SvgGenImage('assets/icons/settings.svg');
+
+  /// File path: assets/icons/subscription.svg
+  SvgGenImage get subscription =>
+      const SvgGenImage('assets/icons/subscription.svg');
+
+  /// File path: assets/icons/theme.svg
+  SvgGenImage get theme => const SvgGenImage('assets/icons/theme.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
     arrowBack,
@@ -89,6 +99,9 @@ class $AssetsIconsGen {
     logOut,
     notification,
     person,
+    settings,
+    subscription,
+    theme,
   ];
 }
 

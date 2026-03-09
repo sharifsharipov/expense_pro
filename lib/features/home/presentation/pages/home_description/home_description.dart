@@ -10,6 +10,8 @@ class HomeDescription extends StatefulWidget {
 
 class _HomeDescriptionState extends State<HomeDescription> {
   @override
-  Widget build(BuildContext context) =>
-      Scaffold(appBar: CustomAppBar(title: 'Home Description'));
+  Widget build(BuildContext context) => Scaffold(
+    appBar: CustomAppBar(title: 'Home Description'),
+    body: const Center(child: Text('Home Description')),
+  );
 }

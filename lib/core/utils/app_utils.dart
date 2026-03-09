@@ -148,6 +148,14 @@ sealed class AppUtils {
   static const BorderRadius kBorderRadius64 = BorderRadius.all(
     Radius.circular(64),
   );
+  static const BorderRadius kBorderRadiusTop16 = BorderRadius.only(
+    topLeft: Radius.circular(16),
+    topRight: Radius.circular(16),
+  );
+  static const BorderRadius kBorderRadiusBottom16 = BorderRadius.only(
+    bottomLeft: Radius.circular(16),
+    bottomRight: Radius.circular(16),
+  );
 
   static const RoundedRectangleBorder kShapeZero = RoundedRectangleBorder();
   static const RoundedRectangleBorder kShapeTop8 = RoundedRectangleBorder(
@@ -160,6 +168,18 @@ sealed class AppUtils {
     borderRadius: BorderRadius.only(
       bottomLeft: Radius.circular(8),
       bottomRight: Radius.circular(8),
+    ),
+  );
+    static const RoundedRectangleBorder kShapeTop16= RoundedRectangleBorder(
+    borderRadius: BorderRadius.only(
+      topLeft: Radius.circular(16),
+      topRight: Radius.circular(16),
+    ),
+  );
+  static const RoundedRectangleBorder kShapeBottom16 = RoundedRectangleBorder(
+    borderRadius: BorderRadius.only(
+      bottomLeft: Radius.circular(16),
+      bottomRight: Radius.circular(16),
     ),
   );
   static const RoundedRectangleBorder kShapeAll8 = RoundedRectangleBorder(
