@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 import 'package:expense_pro/router/routes.dart';
 
-enum AppLanguage { uzbek, russian, english }
+enum AppLanguage { uzbek, russian, english, french }
 
 class AppOptions extends Equatable {
   const AppOptions({required this.themeMode, required this.language});
@@ -82,6 +82,8 @@ class AppOptions extends Equatable {
     'uz' => AppLanguage.uzbek,
     'ru' => AppLanguage.russian,
     'en' => AppLanguage.english,
+    'fr' => AppLanguage.french,
+
     _ => AppLanguage.english, // Default fallback
   };
 
@@ -91,6 +93,7 @@ class AppOptions extends Equatable {
         AppLanguage.uzbek => 'uz',
         AppLanguage.russian => 'ru',
         AppLanguage.english => 'en',
+        AppLanguage.french => 'fr',
       };
 
   /// Convert AppLanguage enum to Locale

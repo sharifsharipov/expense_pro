@@ -1,4 +1,6 @@
 import 'package:expense_pro/core/common/custom_app_bar.dart';
+import 'package:expense_pro/core/extensions/build_context_extension.dart';
+import 'package:expense_pro/core/utils/utils.dart';
 import 'package:expense_pro/features/profile/presentation/pages/settings_page/settings_mixin.dart';
 import 'package:flutter/material.dart';
 
@@ -11,8 +13,20 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> with SettingsMixin {
   @override
-  Widget build(BuildContext context)=> Scaffold(
+  Widget build(BuildContext context) => Scaffold(
     appBar: CustomAppBar(title: 'Settings'),
-    body: const Center(child: Text('Settings')),
+    body: Column(
+      children: [
+        SizedBox(
+          width: double.infinity,
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              borderRadius: AppUtils.kBorderRadius16,
+              color: context.colorScheme.surface,
+            ),
+          ),
+        ),
+      ],
+    ),
   );
 }

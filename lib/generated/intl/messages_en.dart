@@ -22,12 +22,78 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "goodbyeMessage":
-            MessageLookupByLibrary.simpleMessage("Goodbye and see you soon!"),
-        "helloWorld": MessageLookupByLibrary.simpleMessage("Hello World!"),
-        "thankYou": MessageLookupByLibrary.simpleMessage(
-            "Thank you for using our app!"),
-        "welcomeMessage":
-            MessageLookupByLibrary.simpleMessage("Welcome to our application!")
-      };
+    "aboutApplication": MessageLookupByLibrary.simpleMessage(
+      "About Application",
+    ),
+    "achievements": MessageLookupByLibrary.simpleMessage("Achievements"),
+    "achivments": MessageLookupByLibrary.simpleMessage("Achivments"),
+    "addExpense": MessageLookupByLibrary.simpleMessage("Add expense"),
+    "auth": MessageLookupByLibrary.simpleMessage("Authorization"),
+    "automationsRules": MessageLookupByLibrary.simpleMessage(
+      "Automation rules",
+    ),
+    "connectionTimeOut": MessageLookupByLibrary.simpleMessage(
+      "Connection timed out. Please try again.",
+    ),
+    "dark": MessageLookupByLibrary.simpleMessage("Dark"),
+    "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "finance": MessageLookupByLibrary.simpleMessage("Finance"),
+    "financeDescriptionPage": MessageLookupByLibrary.simpleMessage(
+      "Finance page description",
+    ),
+    "gender": MessageLookupByLibrary.simpleMessage("Gender"),
+    "goals": MessageLookupByLibrary.simpleMessage("Goals"),
+    "goalsDescription": MessageLookupByLibrary.simpleMessage(
+      "Goals page description",
+    ),
+    "goodbyeMessage": MessageLookupByLibrary.simpleMessage(
+      "Goodbye, see you soon!",
+    ),
+    "habits": MessageLookupByLibrary.simpleMessage("Habits"),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Hello World!"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "homeDescription": MessageLookupByLibrary.simpleMessage(
+      "Home page description",
+    ),
+    "invalidPassword": MessageLookupByLibrary.simpleMessage(
+      "Invalid password.",
+    ),
+    "language": MessageLookupByLibrary.simpleMessage("Language"),
+    "light": MessageLookupByLibrary.simpleMessage("Light"),
+    "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "notificationRestriction": MessageLookupByLibrary.simpleMessage(
+      "Notification restriction",
+    ),
+    "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "serverError": MessageLookupByLibrary.simpleMessage(
+      "Server error. Please try again later.",
+    ),
+    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "somethingWrong": MessageLookupByLibrary.simpleMessage(
+      "Something went wrong.",
+    ),
+    "subscription": MessageLookupByLibrary.simpleMessage("Subscription"),
+    "subscriptions": MessageLookupByLibrary.simpleMessage("Subscriptions"),
+    "system": MessageLookupByLibrary.simpleMessage("System"),
+    "thankYou": MessageLookupByLibrary.simpleMessage(
+      "Thank you for using our application!",
+    ),
+    "today": MessageLookupByLibrary.simpleMessage("Today"),
+    "tomorrow": MessageLookupByLibrary.simpleMessage("Tomorrow"),
+    "unauthorizedMessage": MessageLookupByLibrary.simpleMessage(
+      "Unauthorized. Please login again.",
+    ),
+    "unexpectedError": MessageLookupByLibrary.simpleMessage(
+      "An unexpected error occurred.",
+    ),
+    "userInformation": MessageLookupByLibrary.simpleMessage("User Information"),
+    "userNotFound": MessageLookupByLibrary.simpleMessage("User not found."),
+    "welcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "Welcome to our application!",
+    ),
+    "yesterday": MessageLookupByLibrary.simpleMessage("Yesterday"),
+  };
 }

@@ -22,12 +22,76 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "goodbyeMessage":
-            MessageLookupByLibrary.simpleMessage("Goodbye and see you soon!"),
-        "helloWorld": MessageLookupByLibrary.simpleMessage("Hello World!"),
-        "thankYou": MessageLookupByLibrary.simpleMessage(
-            "Thank you for using our app!"),
-        "welcomeMessage":
-            MessageLookupByLibrary.simpleMessage("Welcome to our application!")
-      };
+    "aboutApplication": MessageLookupByLibrary.simpleMessage(
+      "Дар бораи барнома",
+    ),
+    "achievements": MessageLookupByLibrary.simpleMessage("Дастовардҳо"),
+    "achivments": MessageLookupByLibrary.simpleMessage("Дастовардҳо"),
+    "addExpense": MessageLookupByLibrary.simpleMessage("Илова кардани хароҷот"),
+    "auth": MessageLookupByLibrary.simpleMessage("Авторизатсия"),
+    "automationsRules": MessageLookupByLibrary.simpleMessage(
+      "Қоидаҳои автоматизатсия",
+    ),
+    "connectionTimeOut": MessageLookupByLibrary.simpleMessage(
+      "Вақти пайвастшавӣ ба охир расид. Лутфан дубора кӯшиш кунед.",
+    ),
+    "dark": MessageLookupByLibrary.simpleMessage("Торик"),
+    "email": MessageLookupByLibrary.simpleMessage("Почтаи электронӣ"),
+    "finance": MessageLookupByLibrary.simpleMessage("Молия"),
+    "financeDescriptionPage": MessageLookupByLibrary.simpleMessage(
+      "Тавсифи саҳифаи молия",
+    ),
+    "gender": MessageLookupByLibrary.simpleMessage("Ҷинс"),
+    "goals": MessageLookupByLibrary.simpleMessage("Ҳадафҳо"),
+    "goalsDescription": MessageLookupByLibrary.simpleMessage(
+      "Тавсифи саҳифаи ҳадафҳо",
+    ),
+    "goodbyeMessage": MessageLookupByLibrary.simpleMessage(
+      "Хайр, ба зудӣ боз мебинем!",
+    ),
+    "habits": MessageLookupByLibrary.simpleMessage("Одатҳо"),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Салом, ҷаҳон!"),
+    "home": MessageLookupByLibrary.simpleMessage("Асосӣ"),
+    "homeDescription": MessageLookupByLibrary.simpleMessage(
+      "Тавсифи саҳифаи асосӣ",
+    ),
+    "invalidPassword": MessageLookupByLibrary.simpleMessage("Рамзи нодуруст."),
+    "language": MessageLookupByLibrary.simpleMessage("Забон"),
+    "light": MessageLookupByLibrary.simpleMessage("Равшан"),
+    "logout": MessageLookupByLibrary.simpleMessage("Баромадан"),
+    "notificationRestriction": MessageLookupByLibrary.simpleMessage(
+      "Маҳдудияти огоҳинома",
+    ),
+    "notifications": MessageLookupByLibrary.simpleMessage("Огоҳиномаҳо"),
+    "password": MessageLookupByLibrary.simpleMessage("Рамз"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Рақами телефон"),
+    "profile": MessageLookupByLibrary.simpleMessage("Профил"),
+    "serverError": MessageLookupByLibrary.simpleMessage(
+      "Хатои сервер. Лутфан баъдтар кӯшиш кунед.",
+    ),
+    "settings": MessageLookupByLibrary.simpleMessage("Танзимот"),
+    "somethingWrong": MessageLookupByLibrary.simpleMessage(
+      "Чизе нодуруст шуд.",
+    ),
+    "subscription": MessageLookupByLibrary.simpleMessage("Обуна"),
+    "subscriptions": MessageLookupByLibrary.simpleMessage("Обунаҳо"),
+    "system": MessageLookupByLibrary.simpleMessage("Система"),
+    "thankYou": MessageLookupByLibrary.simpleMessage(
+      "Ташаккур барои истифодаи барномаи мо!",
+    ),
+    "today": MessageLookupByLibrary.simpleMessage("Имрӯз"),
+    "tomorrow": MessageLookupByLibrary.simpleMessage("Фардо"),
+    "unauthorizedMessage": MessageLookupByLibrary.simpleMessage(
+      "Дастрасӣ нест. Лутфан дубора ворид шавед.",
+    ),
+    "unexpectedError": MessageLookupByLibrary.simpleMessage(
+      "Хатои ғайричашмдошт рух дод.",
+    ),
+    "userInformation": MessageLookupByLibrary.simpleMessage("Маълумоти корбар"),
+    "userNotFound": MessageLookupByLibrary.simpleMessage("Корбар ёфт нашуд."),
+    "welcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "Ба барномаи мо хуш омадед!",
+    ),
+    "yesterday": MessageLookupByLibrary.simpleMessage("Дирӯз"),
+  };
 }

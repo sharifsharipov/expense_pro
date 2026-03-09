@@ -134,6 +134,11 @@ final GoRouter router = GoRouter(
               name: Routes.automationsRules,
               builder: (_, __) => const AutomationsRulesPage(),
             ),
+            GoRoute(
+              path: Routes.aboutApplication,
+              name: Routes.aboutApplication,
+              builder: (_, __) => const AboutApplicationPage(),
+            ),
           ],
         ),
       ],

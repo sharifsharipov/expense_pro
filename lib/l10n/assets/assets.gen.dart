@@ -45,6 +45,10 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/achivments.svg
+  SvgGenImage get achivments =>
+      const SvgGenImage('assets/icons/achivments.svg');
+
   /// File path: assets/icons/arrow_back.svg
   SvgGenImage get arrowBack => const SvgGenImage('assets/icons/arrow_back.svg');
 
@@ -64,6 +68,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home.svg
   SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
 
+  /// File path: assets/icons/idea.svg
+  SvgGenImage get idea => const SvgGenImage('assets/icons/idea.svg');
+
+  /// File path: assets/icons/info.svg
+  SvgGenImage get info => const SvgGenImage('assets/icons/info.svg');
+
   /// File path: assets/icons/language.svg
   SvgGenImage get language => const SvgGenImage('assets/icons/language.svg');
 
@@ -77,6 +87,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/person.svg
   SvgGenImage get person => const SvgGenImage('assets/icons/person.svg');
 
+  /// File path: assets/icons/roller.svg
+  SvgGenImage get roller => const SvgGenImage('assets/icons/roller.svg');
+
   /// File path: assets/icons/settings.svg
   SvgGenImage get settings => const SvgGenImage('assets/icons/settings.svg');
 
@@ -89,16 +102,20 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+    achivments,
     arrowBack,
     chevronRight,
     edit,
     finance,
     goals,
     home,
+    idea,
+    info,
     language,
     logOut,
     notification,
     person,
+    roller,
     settings,
     subscription,
     theme,

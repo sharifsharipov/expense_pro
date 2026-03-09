@@ -1,4 +1,5 @@
 import 'package:expense_pro/core/common/custom_app_bar.dart';
+import 'package:expense_pro/core/extensions/build_context_extension.dart';
 import 'package:expense_pro/features/home/presentation/pages/home_page/home_mixin.dart'
     show HomeMixin;
 import 'package:expense_pro/router/routes.dart';
@@ -17,7 +18,7 @@ class _HomePageState extends State<HomePage> with HomeMixin {
   Widget build(BuildContext context) => Scaffold(
       appBar: CustomAppBar(
         leadingVisible: false,
-        title: 'Home',
+        title: context.locale.home,
         actions: IconButton(
           onPressed: () => context.pushNamed(Routes.homeDescription),
           icon: Icon(Icons.add),

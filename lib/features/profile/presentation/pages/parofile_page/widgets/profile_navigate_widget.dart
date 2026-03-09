@@ -38,7 +38,7 @@ class ProfileNavigateWidget extends StatelessWidget {
           ),
           GestureDetector(onTap: onTap, child: Assets.icons.chevronRight.svg()),
         ],
-      ).paddingSymmetric(horizontal: 12, vertical: 8),
+      ).paddingSymmetric(horizontal: 12, vertical: 10),
     );
   }
 }

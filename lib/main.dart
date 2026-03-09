@@ -1,49 +1,44 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:bloc/bloc.dart';
 import 'package:expense_pro/app.dart';
+import 'package:expense_pro/core/database/local_source.dart';
 import 'package:expense_pro/core/di/injection.dart';
 import 'package:expense_pro/core/models/app_options.dart';
-import 'package:expense_pro/core/database/local_source.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:bloc/bloc.dart';
 import 'core/utils/utils.dart';
 
 Future<void> main() async {
+  // 1. Обязательная инициализация для плагинов и Bindings
   WidgetsFlutterBinding.ensureInitialized();
-
-  /// init firebase
-
-  // await dotenv.load();
-  await Future.wait([
-
-    configureDI(),
- 
-  ] as Iterable<Future<dynamic>>);
-  /// bloc logger
+  // 2. Инициализация DI (внутри которого открывается Hive Box и регистрируется LocalSource)
+  await configureDI();
+  // 3. Настройка логирования Bloc (только для дебага)
   if (kDebugMode) {
     Bloc.observer = LogBlocObserver();
   }
-
-  /// global CERTIFICATE_VERIFY_FAILEd_KEY
+  // 4. Глобальный обход сертификатов (если нужно для дев-сервера)
   HttpOverrides.global = MyHttpOverrides();
-
-  if (kDebugMode) {
-    Bloc.observer = LogBlocObserver();
-  }
+  // 5. ПОЛУЧАЕМ СОХРАНЕННЫЕ НАСТРОЙКИ ИЗ HIVE
+  final localSource = sl<LocalSource>();
+  // Читаем тему и язык напрямую из твоего LocalSource
+  final initialTheme = localSource.themeMode;
+  final initialLanguage = AppOptions.languageFromCode(localSource.locale);
 
   runApp(
     ModelBinding(
       initialModel: AppOptions(
-        themeMode: ThemeMode.light,
-        language: AppOptions.languageFromCode(sl<LocalSource>().locale),
+        themeMode: initialTheme,
+        language: initialLanguage,
       ),
       child: const App(),
     ),
   );
 }
 
+/// Класс для работы с HTTP сертификатами (как в твоем исходнике)
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) =>

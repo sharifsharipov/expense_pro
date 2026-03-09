@@ -1,4 +1,5 @@
 import 'package:expense_pro/core/common/custom_app_bar.dart';
+import 'package:expense_pro/core/extensions/build_context_extension.dart';
 import 'package:expense_pro/features/finance/presentation/pages/finance_page/finance_mixin.dart';
 import 'package:expense_pro/router/routes.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _FinancePageState extends State<FinancePage> with FinanceMixin {
   Widget build(BuildContext context) => Scaffold(
     appBar: CustomAppBar(
       leadingVisible: false,
-      title: 'Finance',
+      title: context.locale.finance,
       actions: IconButton(
         onPressed: () => context.pushNamed(Routes.financeDescription),
         icon: Icon(Icons.add),

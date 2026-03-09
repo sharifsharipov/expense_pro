@@ -22,12 +22,78 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "goodbyeMessage":
-            MessageLookupByLibrary.simpleMessage("Goodbye and see you soon!"),
-        "helloWorld": MessageLookupByLibrary.simpleMessage("Hello World!"),
-        "thankYou": MessageLookupByLibrary.simpleMessage(
-            "Thank you for using our app!"),
-        "welcomeMessage":
-            MessageLookupByLibrary.simpleMessage("Welcome to our application!")
-      };
+    "aboutApplication": MessageLookupByLibrary.simpleMessage("Ilova haqida"),
+    "achievements": MessageLookupByLibrary.simpleMessage("Yutuqlar"),
+    "achivments": MessageLookupByLibrary.simpleMessage("Yutuqlar"),
+    "addExpense": MessageLookupByLibrary.simpleMessage("Xarajat qo‘shish"),
+    "auth": MessageLookupByLibrary.simpleMessage("Avtorizatsiya"),
+    "automationsRules": MessageLookupByLibrary.simpleMessage(
+      "Avtomatlashtirish qoidalari",
+    ),
+    "connectionTimeOut": MessageLookupByLibrary.simpleMessage(
+      "Ulanish vaqti tugadi. Iltimos, qayta urinib ko‘ring.",
+    ),
+    "dark": MessageLookupByLibrary.simpleMessage("Qorong\'i"),
+    "email": MessageLookupByLibrary.simpleMessage("Elektron pochta"),
+    "finance": MessageLookupByLibrary.simpleMessage("Moliya"),
+    "financeDescriptionPage": MessageLookupByLibrary.simpleMessage(
+      "Moliya sahifasi tavsifi",
+    ),
+    "gender": MessageLookupByLibrary.simpleMessage("Jins"),
+    "goals": MessageLookupByLibrary.simpleMessage("Maqsadlar"),
+    "goalsDescription": MessageLookupByLibrary.simpleMessage(
+      "Maqsadlar sahifasi tavsifi",
+    ),
+    "goodbyeMessage": MessageLookupByLibrary.simpleMessage(
+      "Xayr, tez orada ko‘rishguncha!",
+    ),
+    "habits": MessageLookupByLibrary.simpleMessage("Odatlar"),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Salom, dunyo!"),
+    "home": MessageLookupByLibrary.simpleMessage("Asosiy"),
+    "homeDescription": MessageLookupByLibrary.simpleMessage(
+      "Asosiy sahifa tavsifi",
+    ),
+    "invalidPassword": MessageLookupByLibrary.simpleMessage("Noto‘g‘ri parol."),
+    "language": MessageLookupByLibrary.simpleMessage("Til"),
+    "light": MessageLookupByLibrary.simpleMessage("Yorqin"),
+    "logout": MessageLookupByLibrary.simpleMessage("Chiqish"),
+    "notificationRestriction": MessageLookupByLibrary.simpleMessage(
+      "Bildirishnoma cheklovi",
+    ),
+    "notifications": MessageLookupByLibrary.simpleMessage("Bildirishnomalar"),
+    "password": MessageLookupByLibrary.simpleMessage("Parol"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqami"),
+    "profile": MessageLookupByLibrary.simpleMessage("Profil"),
+    "serverError": MessageLookupByLibrary.simpleMessage(
+      "Server xatosi. Keyinroq urinib ko‘ring.",
+    ),
+    "settings": MessageLookupByLibrary.simpleMessage("Sozlamalar"),
+    "somethingWrong": MessageLookupByLibrary.simpleMessage(
+      "Nimadir xato ketdi.",
+    ),
+    "subscription": MessageLookupByLibrary.simpleMessage("Obuna"),
+    "subscriptions": MessageLookupByLibrary.simpleMessage("Obunalar"),
+    "system": MessageLookupByLibrary.simpleMessage("Tizim"),
+    "thankYou": MessageLookupByLibrary.simpleMessage(
+      "Ilovamizdan foydalanganingiz uchun rahmat!",
+    ),
+    "today": MessageLookupByLibrary.simpleMessage("Bugun"),
+    "tomorrow": MessageLookupByLibrary.simpleMessage("Ertaga"),
+    "unauthorizedMessage": MessageLookupByLibrary.simpleMessage(
+      "Ruxsat yo‘q. Iltimos, qayta kiring.",
+    ),
+    "unexpectedError": MessageLookupByLibrary.simpleMessage(
+      "Kutilmagan xato yuz berdi.",
+    ),
+    "userInformation": MessageLookupByLibrary.simpleMessage(
+      "Foydalanuvchi ma’lumotlari",
+    ),
+    "userNotFound": MessageLookupByLibrary.simpleMessage(
+      "Foydalanuvchi topilmadi.",
+    ),
+    "welcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "Ilovamizga xush kelibsiz!",
+    ),
+    "yesterday": MessageLookupByLibrary.simpleMessage("Kecha"),
+  };
 }

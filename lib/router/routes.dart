@@ -4,6 +4,7 @@ import 'package:expense_pro/core/di/injection.dart';
 import 'package:expense_pro/features/auth/presentation/blocs/auth_bloc/auth_bloc.dart';
 import 'package:expense_pro/features/auth/presentation/pages/auth_page/auth_page.dart';
 import 'package:expense_pro/features/main/presentation/bloc/main_bloc.dart';
+import 'package:expense_pro/features/profile/presentation/pages/about_application_page/about_application_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

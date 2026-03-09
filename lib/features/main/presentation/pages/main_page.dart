@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> with MainMixin {
               currentIndex: widget.navigationShell.currentIndex >= 2
                   ? widget.navigationShell.currentIndex + 1
                   : widget.navigationShell.currentIndex,
-              selectedItemColor:const Color.fromARGB(246, 241, 193, 20),
+              selectedItemColor: const Color.fromARGB(246, 241, 193, 20),
               unselectedItemColor:
                   context.theme.bottomNavigationBarTheme.unselectedItemColor,
               onTap: (int index) {
@@ -49,7 +49,7 @@ class _MainPageState extends State<MainPage> with MainMixin {
                   icon: Assets.icons.home.svg(
                     colorFilter: unselectedItemColorFilter,
                   ),
-                  label: 'home',
+                  label: context.locale.home,
                 ),
                 BottomNavigationBarItem(
                   activeIcon: Assets.icons.finance.svg(
@@ -58,7 +58,7 @@ class _MainPageState extends State<MainPage> with MainMixin {
                   icon: Assets.icons.finance.svg(
                     colorFilter: unselectedItemColorFilter,
                   ),
-                  label: 'finanse',
+                  label: context.locale.finance,
                 ),
                 const BottomNavigationBarItem(
                   icon: SizedBox(width: 48, height: 24),
@@ -71,7 +71,7 @@ class _MainPageState extends State<MainPage> with MainMixin {
                   icon: Assets.icons.goals.svg(
                     colorFilter: unselectedItemColorFilter,
                   ),
-                  label: 'goals',
+                  label: context.locale.goals,
                 ),
                 BottomNavigationBarItem(
                   activeIcon: Assets.icons.person.svg(
@@ -80,7 +80,7 @@ class _MainPageState extends State<MainPage> with MainMixin {
                   icon: Assets.icons.person.svg(
                     colorFilter: unselectedItemColorFilter,
                   ),
-                  label: 'profile',
+                  label: context.locale.profile,
                 ),
               ],
             ),

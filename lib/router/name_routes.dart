@@ -39,4 +39,5 @@ sealed class Routes {
   static const String theme = '/theme';
   static const String userInfo = '/user-info';
   static const String automationsRules = '/automations-rules';
+  static const String aboutApplication = '/about-application';
 }

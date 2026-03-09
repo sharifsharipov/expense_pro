@@ -13,6 +13,7 @@ sealed class Themes {
 
     /// AppBar Theme
     appBarTheme: AppBarTheme(
+      toolbarHeight: 40,
       elevation: 0,
       centerTitle: true,
       scrolledUnderElevation: 2,
@@ -149,7 +150,6 @@ sealed class Themes {
         minimumSize: const WidgetStatePropertyAll(Size(36, 36)),
       ),
     ),
-
     ///
     chipTheme: ChipThemeData(
       selectedColor: AppColor.lightScheme.primary,
@@ -169,6 +169,7 @@ sealed class Themes {
     /// AppBar Theme
     appBarTheme: AppBarTheme(
       elevation: 0,
+      toolbarHeight: 40,
       centerTitle: true,
       scrolledUnderElevation: 2,
       shadowColor: const Color.fromRGBO(0, 0, 0, 0.3),
