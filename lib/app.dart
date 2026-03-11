@@ -12,6 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Получаем текущие настройки из твоего AppOptions через extension
+    ////
     final options = context.options;
     return AnnotatedRegion<SystemUiOverlayStyle>(
       // Этот метод из твоего AppOptions правильно подкрасит статус-бар
