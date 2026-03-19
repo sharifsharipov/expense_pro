@@ -58,9 +58,10 @@ class AppOptions extends Equatable {
 
     scope!.modelBindingState.updateModel(newModel);
 
-    // Persist language to local storage
+    // Persist language and theme to local storage
     final localeCode = _languageToLocaleCode(newModel.language);
     localSource.setLocale(localeCode);
+    localSource.setThemeMode(newModel.themeMode);
   }
 
   /// Update only language

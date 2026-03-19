@@ -29,11 +29,24 @@ class SettingsNavigateWidget extends StatelessWidget {
         Row(
           spacing: 12,
           children: [
-            icon.svg(),
+            icon.svg(
+              colorFilter: ColorFilter.mode(
+                context.isDarkMode ? Colors.white : Colors.black,
+                BlendMode.srcIn,
+              ),
+            ),
             Text(title, style: context.textStyle.manrope16w500),
           ],
         ),
-        GestureDetector(onTap: onTap, child: Assets.icons.chevronRight.svg()),
+        GestureDetector(
+          onTap: onTap,
+          child: Assets.icons.chevronRight.svg(
+            colorFilter: ColorFilter.mode(
+              context.isDarkMode ? Colors.white : Colors.black,
+              BlendMode.srcIn,
+            ),
+          ),
+        ),
       ],
     ).paddingSymmetric(horizontal: 12, vertical: 10),
   );

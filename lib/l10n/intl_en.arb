@@ -41,5 +41,6 @@
     "dark": "Dark",
     "system": "System",
     "language": "Language",
+    "theme": "Theme",
     "notificationRestriction": "Notification restriction"
 }

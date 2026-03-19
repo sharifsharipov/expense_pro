@@ -4,6 +4,7 @@ import 'package:expense_pro/core/extensions/padding_extensions.dart';
 import 'package:expense_pro/core/utils/utils.dart';
 import 'package:expense_pro/l10n/assets/assets.gen.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class NottificationsAccesWidget extends StatelessWidget {
   final VoidCallback onTap;
@@ -25,7 +26,10 @@ class NottificationsAccesWidget extends StatelessWidget {
           child: Row(
             spacing: 12,
             children: [
-              Assets.icons.notification.svg(),
+              Assets.icons.notification.svg(   colorFilter: ColorFilter.mode(
+                  context.isDarkMode ? Colors.white :   Colors.black,
+                  BlendMode.srcIn,
+                ),),
             
               Text(
                 context.locale.notifications,

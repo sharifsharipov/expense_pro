@@ -58,7 +58,7 @@ class AppTextStyle extends ThemeExtension<AppTextStyle> {
     ),
     manrope14w500primary: const TextStyle(
       fontSize: 14,
-      color: Color(0xFF757df4),
+      color: Color(0xFF818cf8),
       fontWeight: FontWeight.w500,
       fontFamily: _manropeFont,
     ),
@@ -82,7 +82,7 @@ class AppTextStyle extends ThemeExtension<AppTextStyle> {
     ),
     poppins18w500primary: const TextStyle(
       fontSize: 18,
-      color: Color(0xFF757df4),
+      color: Color(0xFF818cf8),
       fontWeight: FontWeight.w500,
       fontFamily: _poppins,
     ),

@@ -369,6 +369,11 @@ class S {
     return Intl.message('Language', name: 'language', desc: '', args: []);
   }
 
+  /// `Theme`
+  String get theme {
+    return Intl.message('Theme', name: 'theme', desc: '', args: []);
+  }
+
   /// `Notification restriction`
   String get notificationRestriction {
     return Intl.message(

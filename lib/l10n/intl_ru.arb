@@ -41,5 +41,6 @@
     "dark": "Темная",
     "system": "Система",
     "language": "Язык",
+    "theme": "Тема",
     "notificationRestriction": "Ограничение уведомлений"
 }

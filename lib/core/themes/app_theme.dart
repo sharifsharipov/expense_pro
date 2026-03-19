@@ -84,7 +84,7 @@ sealed class Themes {
       color: AppColor.lightScheme.primary,
       circularTrackColor: AppColor.lightScheme.primary.withValues(alpha: 0.2),
     ),
-
+  
     ///
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
@@ -180,19 +180,19 @@ sealed class Themes {
       titleTextStyle: AppTextStyle.dark.poppins18w600,
     ),
     dividerTheme: const DividerThemeData(
-      color: Color(0xFF1E293B),
+      color: Color(0xFF2C2C2E),
       thickness: 1,
     ),
     primaryColor: AppColor.darkScheme.primary,
     inputDecorationTheme: InputDecorationTheme(
       focusColor: AppColor.darkScheme.primary,
-      hoverColor: const Color(0xFF1E293B),
-      border: const OutlineInputBorder(
-        borderSide: BorderSide(color: Color(0xFF334155)),
+      hoverColor: AppColor.darkScheme.surfaceContainerHighest,
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColor.darkScheme.outline),
         borderRadius: AppUtils.kBorderRadius8,
       ),
-      enabledBorder: const OutlineInputBorder(
-        borderSide: BorderSide(color: Color(0xFF334155)),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColor.darkScheme.outline),
         borderRadius: AppUtils.kBorderRadius8,
       ),
       disabledBorder: const OutlineInputBorder(
@@ -219,9 +219,9 @@ sealed class Themes {
     ),
     iconTheme: const IconThemeData(color: Colors.white),
     focusColor: AppColor.darkScheme.primary,
-    scaffoldBackgroundColor: AppColor.darkScheme.surface,
+    scaffoldBackgroundColor: Colors.black,
     bottomSheetTheme: BottomSheetThemeData(
-      backgroundColor: const Color(0xFF1E293B),
+      backgroundColor: AppColor.darkScheme.surfaceContainerHighest,
       showDragHandle: true,
       dragHandleColor: Colors.white.withValues(alpha: 0.4),
       dragHandleSize: const Size(48, 4),
@@ -243,12 +243,12 @@ sealed class Themes {
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       enableFeedback: true,
-      elevation: 4,
-      backgroundColor: const Color(0xFF0F172A),
+      elevation: 8,
+      backgroundColor: const Color(0xFF111111),
       showSelectedLabels: true,
       showUnselectedLabels: true,
       selectedItemColor: AppColor.darkScheme.primary,
-      unselectedItemColor: const Color(0xFF64748B),
+      unselectedItemColor: Colors.white,
       selectedLabelStyle: TextStyle(
         fontFamily: 'Manrope',
         fontSize: 12,
@@ -259,7 +259,7 @@ sealed class Themes {
         fontFamily: 'Manrope',
         fontSize: 12,
         fontWeight: FontWeight.w400,
-        color: Color(0xFF64748B),
+        color: Colors.white,
       ),
     ),
 
@@ -308,7 +308,7 @@ sealed class Themes {
     ///
     chipTheme: ChipThemeData(
       selectedColor: AppColor.darkScheme.primary,
-      backgroundColor: const Color(0xFF1E293B),
+      backgroundColor: AppColor.darkScheme.surfaceContainerHighest,
       checkmarkColor: Colors.white,
       shape: const RoundedSuperellipseBorder(
         borderRadius: AppUtils.kBorderRadius16,

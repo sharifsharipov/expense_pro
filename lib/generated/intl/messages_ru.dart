@@ -77,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "thankYou": MessageLookupByLibrary.simpleMessage(
       "Спасибо за использование нашего приложения!",
     ),
+    "theme": MessageLookupByLibrary.simpleMessage("Тема"),
     "today": MessageLookupByLibrary.simpleMessage("Сегодня"),
     "tomorrow": MessageLookupByLibrary.simpleMessage("Завтра"),
     "unauthorizedMessage": MessageLookupByLibrary.simpleMessage(

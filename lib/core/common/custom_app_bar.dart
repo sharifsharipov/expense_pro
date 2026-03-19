@@ -32,7 +32,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 onTap?.call();
                 context.pop();
               },
-              icon: Assets.icons.arrowBack.svg(),
+              icon: Assets.icons.arrowBack.svg(
+                colorFilter: ColorFilter.mode(
+                  context.isDarkMode ? Colors.white :   Colors.black,
+                  BlendMode.srcIn,
+                ),
+              ),
             )
           : const SizedBox.shrink(),
       centerTitle: centerTitle,

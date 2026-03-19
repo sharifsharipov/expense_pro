@@ -29,7 +29,7 @@ class App extends StatelessWidget {
 
         /// Локализация
         // ТЕПЕРЬ ЛОКАЛЬ ТОЖЕ БЕРЕТСЯ ИЗ НАСТРОЕК. options.locale
-        locale:  Locale('uz'),
+        locale: options.locale,
         localizationsDelegates: const [
           S.delegate,
           GlobalWidgetsLocalizations.delegate,

@@ -20,13 +20,13 @@ sealed class AppColor {
     onPrimary: Colors.white,
     secondary: Color(0xff1B93FE),
     onSecondary: Colors.white,
-    surface: Color(0xFF020617),
+    surface:  Color(0xFF111111),
     onSurface: Colors.white,
-    surfaceContainerHighest: Color(0xff2D2D2D),
+    surfaceContainerHighest: Color(0xFF1C1C1E),
     tertiary: Color(0xff7E5FA6),
     error: Color(0xfff75555),
-    outline: Color(0xff3A3A3A),
-    outlineVariant: Color(0xff1E1E1E),
+    outline: Color(0xFF2C2C2E),
+    outlineVariant: Color(0xFF1C1C1E),
   );
 
   static const Color success = Color(0xFF0CB867);
