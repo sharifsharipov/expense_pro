@@ -8,13 +8,13 @@
   <img src="https://img.shields.io/badge/Version-1.0.0+1-success" />
 </p>
 
-> Shaxsiy moliyani boshqarish uchun zamonaviy Flutter ilovasi. Xarajatlarni kuzatish, moliyaviy maqsadlar qo'yish va investitsiyalarni boshqarish — barchasi bir joyda.
+> A modern Flutter application for personal finance management. Track expenses, set financial goals, and manage investments — all in one place.
 
 ---
 
-## 📱 Platformalar
+## 📱 Platforms
 
-| Platform | Holati |
+| Platform | Status |
 |----------|--------|
 | Android  | ✅ |
 | iOS      | ✅ |
@@ -25,9 +25,9 @@
 
 ---
 
-## 🏗️ Arxitektura
+## 🏗️ Architecture
 
-Loyiha **Clean Architecture** + **BLoC pattern** asosida qurilgan:
+The project is built on **Clean Architecture** + **BLoC pattern**:
 
 ```
 Presentation Layer (Pages + Blocs)
@@ -39,7 +39,7 @@ Data Layer (Models + DataSources + Mappers + RepoImpls)
 Supabase / Firebase / Hive
 ```
 
-Har bir feature quyidagi tuzilmaga ega:
+Each feature follows this structure:
 
 ```
 feature/
@@ -59,87 +59,87 @@ feature/
 
 ---
 
-## ✨ Asosiy Funksiyalar
+## ✨ Key Features
 
-| Feature | Tavsif |
-|---------|--------|
-| 🔐 **Auth** | Kirish va ro'yxatdan o'tish (OTP SMS) |
-| 🏠 **Home** | Dashboard — xarajatlar va balans ko'rinishi |
-| 💰 **Finance** | Moliyaviy hisobotlar va tahlil |
-| 🎯 **Goals** | Moliyaviy maqsadlar va kuzatuv |
-| ➕ **Add Expense** | Tezkor xarajat qo'shish |
-| 👤 **Profile** | Profil, sozlamalar, yutuqlar, odatlar kuzatuvchisi, obunalar, avtomatlashtirish va boshqalar |
+| Feature | Description |
+|---------|-------------|
+| 🔐 **Auth** | Sign in and sign up (OTP SMS) |
+| 🏠 **Home** | Dashboard — expense and balance overview |
+| 💰 **Finance** | Financial reports and analytics |
+| 🎯 **Goals** | Financial goals and progress tracking |
+| ➕ **Add Expense** | Quick expense entry |
+| 👤 **Profile** | Profile, settings, achievements, habit tracker, subscriptions, automation, and more |
 
 ---
 
-## 🛠️ Texnologiyalar
+## 🛠️ Technologies
 
 ### State Management
 - `flutter_bloc ^9.1.1` · `bloc ^9.1.0` · `bloc_concurrency ^0.3.0`
 
-### Navigatsiya
-- `go_router ^17.0.0` — `StatefulShellRoute` bilan 4 ta tab
+### Navigation
+- `go_router ^17.0.0` — 4 tabs with `StatefulShellRoute`
 
 ### Backend & Network
-- `supabase_flutter ^2.12.0` — asosiy backend
+- `supabase_flutter ^2.12.0` — primary backend
 - `dio ^5.9.0` — HTTP client
 - Firebase — Messaging, Crashlytics, Remote Config
 
-### Lokal Saqlash
+### Local Storage
 - `hive ^2.2.3` + `hive_flutter ^1.1.0`
 
 ### Localization
 - `intl ^0.20.2` + `flutter_localizations`
-- Qo'llab-quvvatlanadigan tillar: 🇺🇿 **O'zbek** · 🇷🇺 **Ruscha** · 🇬🇧 **Inglizcha** · 🇫🇷 **Fransuzcha**
+- Supported languages: 🇺🇿 **Uzbek** · 🇷🇺 **Russian** · 🇬🇧 **English** · 🇹🇯 **Tajik**
 
-### UI / Dizayn
+### UI / Design
 - `flutter_svg` · `cached_network_image` · `shimmer` · `pinput` · `scale_button` · `gap`
-- Fontlar: **Manrope** (400/500/700) · **Poppins** (500/700)
-- Light va Dark mavzu qo'llab-quvvatlanadi
+- Fonts: **Manrope** (400/500/700) · **Poppins** (500/700)
+- Light and Dark theme support
 
 ### Code Generation
 - `freezed ^3.2.3` · `json_serializable ^6.13.0` · `injectable_generator ^2.9.1` · `flutter_gen_runner ^5.12.0`
 
 ---
 
-## 🚀 Ishga tushirish
+## 🚀 Getting Started
 
-### Talablar
+### Requirements
 - Flutter SDK `>=3.10.0 <4.0.0`
 - Dart SDK `>=3.0.0`
 
-### O'rnatish
+### Installation
 
 ```bash
-# Reponi klonlash
+# Clone the repository
 git clone https://github.com/sharifsharipov/expense_pro.git
 cd expense_pro
 
-# Dependency'larni o'rnatish
+# Install dependencies
 flutter pub get
 
-# Kodni generatsiya qilish
+# Run code generation
 dart run build_runner build --delete-conflicting-outputs
 
-# Ilovani ishga tushirish
+# Run the app
 flutter run
 ```
 
-### Makefile buyruqlari
+### Makefile Commands
 
 ```bash
-make gen       # Kod generatsiya qilish (build_runner)
-make clean     # Loyihani tozalash
+make gen       # Run code generation (build_runner)
+make clean     # Clean the project
 ```
 
 ---
 
-## 📁 Loyiha Tuzilmasi
+## 📁 Project Structure
 
 ```
 lib/
-  ├── core/               # Utility, theme, DI, errors, extensions
-  │   ├── common/         # Umumiy widgetlar
+  ├── core/               # Utilities, theme, DI, errors, extensions
+  │   ├── common/         # Shared widgets
   │   ├── di/             # GetIt + Injectable
   │   ├── themes/         # AppColor, AppTextStyle, AppTheme
   │   ├── services/       # Auth, Location, Notification, SMS
@@ -152,24 +152,24 @@ lib/
   │   ├── add_expense/
   │   ├── profile/
   │   └── main/
-  └── l10n/               # Localization (arb fayllar)
+  └── l10n/               # Localization (arb files)
 ```
 
 ---
 
-## 🤝 Hissa qo'shish
+## 🤝 Contributing
 
-1. Fork qiling
-2. Feature branch oching: `git checkout -b feature/yangi-funksiya`
-3. O'zgarishlarni commit qiling: `git commit -m 'feat: yangi funksiya qo'shildi'`
-4. Push qiling: `git push origin feature/yangi-funksiya`
-5. Pull Request oching
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit your changes: `git commit -m 'feat: add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Open a Pull Request
 
 ---
 
-## 📄 Litsenziya
+## 📄 License
 
-Ushbu loyiha xususiy (private) litsenziya ostida tarqatiladi.
+This project is distributed under a private license.
 
 ---
 
