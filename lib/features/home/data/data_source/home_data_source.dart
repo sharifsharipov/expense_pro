@@ -1,1 +1,1 @@
-abstract class HomeDataSource {}
+abstract interface class HomeDataSource {}

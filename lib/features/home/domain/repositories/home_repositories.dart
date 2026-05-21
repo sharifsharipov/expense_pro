@@ -1,1 +1,1 @@
-abstract class HomeRepositories {}
+ abstract interface class HomeRepositories {}
