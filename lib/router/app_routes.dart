@@ -50,7 +50,9 @@ final GoRouter router = GoRouter(
             GoRoute(
               path: Routes.homeDescription,
               name: Routes.homeDescription,
-              builder: (_, __) => const HomeDescription(),
+              builder: (_, state) => HomeDescription(
+                initialCategory: state.extra as String?,
+              ),
             ),
           ],
         ),

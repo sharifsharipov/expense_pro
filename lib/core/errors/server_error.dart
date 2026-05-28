@@ -1,7 +1,6 @@
-
 import 'package:dio/dio.dart' hide Headers;
+import 'package:expense_pro/core/errors/failure.dart';
 
-import 'failure.dart';
 
 final class ServerError implements Exception {
   ServerError.withDioError({required DioException error}) {
@@ -12,12 +11,12 @@ final class ServerError implements Exception {
     required String message,
     int? code,
   }) {
-    _errorMessage = message;
-    _errorCode = code;
+    _errorMessage = message.isNotEmpty ? message : "Unknown error";
+    _errorCode = code ?? 500;
   }
 
   int? _errorCode;
-  String _errorMessage = '';
+  String _errorMessage = "";
 
   int get errorCode => _errorCode ?? 0;
 
@@ -25,59 +24,65 @@ final class ServerError implements Exception {
 
   void _handleError(DioException error) {
     _errorCode = error.response?.statusCode ?? 500;
-    if (_errorCode == 500) {
-      _errorMessage = 'Server error';
-      return;
+
+    switch (_errorCode) {
+      case 500:
+        _errorMessage = "Server error";
+        break;
+      case 502:
+        _errorMessage = "Server down";
+        break;
+      case 404:
+        _errorMessage = "Not Found";
+        break;
+      case 413:
+        _errorMessage = "Request Entity Too Large";
+        break;
+      case 401:
+        _errorMessage = "Token expired";
+        break;
+      case 403:
+        _errorMessage = "Forbidden access";  // Differentiated message
+        break;
+      default:
+        _handleDioErrorType(error);
     }
-    if (_errorCode == 502) {
-      _errorMessage = 'Server down';
-      return;
-    }
-    if (_errorCode == 404) {
-      _errorMessage = 'Not Found';
-      return;
-    }
-    if (_errorCode == 413) {
-      _errorMessage = 'Request Entity Too Large';
-      return;
-    }
-    if (_errorCode == 401) {
-      _errorMessage = 'Token expired';
-      return;
-    }
-    if (_errorCode == 403) {
-      _errorMessage = 'Token expired';
-      return;
-    }
+  }
+
+  void _handleDioErrorType(DioException error) {
     switch (error.type) {
       case DioExceptionType.connectionTimeout:
-        _errorMessage = 'Connection timeout';
+        _errorMessage = "Connection timeout";
+        break;
       case DioExceptionType.sendTimeout:
-        _errorMessage = 'Connection timeout';
+        _errorMessage = "Connection timeout";
+        break;
       case DioExceptionType.receiveTimeout:
-        _errorMessage = 'Connection timeout';
+        _errorMessage = "Connection timeout";
+        break;
       case DioExceptionType.badResponse:
-        {
-          final Map errorMap = error.response?.data ?? {};
-          if (errorMap['Error'] is Map<String, dynamic>) {
-            _errorMessage =
-                (errorMap['Error'] as Map<String, dynamic>)['message']
-                    .toString();
-          } else {
-            _errorMessage = errorMap['message'].toString();
-          }
-          break;
+        if (error.response?.data != null &&
+            error.response?.data["Error"] is Map<String, dynamic>) {
+          _errorMessage = error.response!.data["Error"]["message"].toString();
+        } else if (error.response?.data["message"] != null) {
+          _errorMessage = error.response!.data["message"].toString();
+        } else {
+          _errorMessage = "Unknown server error";
         }
+        break;
       case DioExceptionType.cancel:
-        _errorMessage = 'Canceled';
+        _errorMessage = "Canceled";
+        break;
       case DioExceptionType.unknown:
-        _errorMessage = 'Something wrong';
+        _errorMessage = "Something wrong";
+        break;
       case DioExceptionType.badCertificate:
-        _errorMessage = 'Bad certificate';
+        _errorMessage = "Bad certificate";
+        break;
       case DioExceptionType.connectionError:
-        _errorMessage = 'Connection error';
+        _errorMessage = "Connection error";
+        break;
     }
-    return;
   }
 }
 
